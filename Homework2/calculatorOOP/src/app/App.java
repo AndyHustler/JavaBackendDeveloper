@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         System.out.println("Hi, i am calculator!");
-        System.out.println("I can perform operations with integers");
+        System.out.println("I can perform operations with double");
         System.out.println("I can perform the following operations: +, -, *, /");
         System.out.println("I can perform exponentiation operation. Type arg1 ^ arg2");
         System.out.println("I can calculate the remainder of the division. Type arg1 % arg2");
