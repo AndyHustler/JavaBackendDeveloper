@@ -6,7 +6,9 @@ public class App {
         System.out.println("Hi, i am calculator!");
         System.out.println("I can perform operations with integers");
         System.out.println("I can perform the following operations: +, -, *, /");
-         System.out.println("To exit, type 'exit'");
+        System.out.println("I can perform exponentiation operation. Type arg1 ^ arg2");
+        System.out.println("I can calculate the remainder of the division. Type arg1 % arg2");
+        System.out.println("To exit, type 'exit'");
         while (true) {
             System.out.println("Enter an expression:");
             String exp = sc.nextLine();
@@ -24,6 +26,8 @@ public class App {
         if(exp.contains("-") && testExp(exp, "-")) return difference(getDigits(exp, "-"));
         if(exp.contains("*") && testExp(exp, "\\*")) return multiply(getDigits(exp, "\\*"));
         if(exp.contains("/") && testExp(exp, "\\/")) return divide(getDigits(exp, "\\/"));
+        if(exp.contains("^") && testExp(exp, "\\^")) return exponentiation(getDigits(exp, "\\^"));
+        if(exp.contains("%") && testExp(exp, "\\%")) return remainder(getDigits(exp, "\\%"));
         return "Enter a valid expression.";
     }
     //Addition operation
@@ -44,7 +48,18 @@ public class App {
     //Division operation
     private static String divide(int[] d) {
         if(d[1] == 0) return "You can't divide by 0";
-        return "Result: " + (d[0] / d[1]) + "." + (d[0]%d[1]);
+        if(d[0] % d[1] > 0) return "Result: " + ((double)d[0] / d[1]);
+        return "Result: " + (d[0] / d[1]);
+    }
+
+    //Exponentiation operation
+    private static String exponentiation(int[] d) {
+        return "Result: " + (int)Math.pow(d[0], d[1]);
+    }
+
+    //Remainder division operation
+    private static String remainder(int[] d) {
+        return "Result: " + (d[0] % d[1]);
     }
 
     //Extracting numbers from a string
