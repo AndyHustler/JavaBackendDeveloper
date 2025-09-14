@@ -1,18 +1,14 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Занятие 2 - Первое занятие по ООП, принципы, классы и объекты
+## Вариант 1 - Калькулятор
+Основываясь на задании после первого занятия, переписать консольный калькулятор с использованием
+принципов объектно-ориентированного программирования (ООП). Калькулятор должен поддерживать
+основные арифметические операции. Создать отдельный класс калькулятора, а также класс операции, и
+его наследников, которые будут представлять конкретную реализацию операции (например Addition
+extends Operation и т. д.). Объект калькулятора должен иметь метод по вычислению операции. Класс
+операции должен иметь поля - операнды и метод, который возвращает результат операции.
+## Требования:
+ - Соответствие принципам ООП
+ - Грамотное использование наследования
+ - Инкапсуляция деталей работы с классом калькулятора
+ - Также опционально можно создать отдельный класс, в котором будет содержаться логика валидации выражения (валидатор).
+ - Консольный интерфейс не должен претерпеть сильных изменений в сравнении с 1 заданием
