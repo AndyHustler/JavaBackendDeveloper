@@ -1,0 +1,13 @@
+package com.example;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+public class MyListener implements PropertyChangeListener {
+
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
+        System.out.printf("Old string << %s >>, new string << %s >>", ((String) evt.getOldValue()), ((String) evt.getNewValue()));
+    }
+
+}
