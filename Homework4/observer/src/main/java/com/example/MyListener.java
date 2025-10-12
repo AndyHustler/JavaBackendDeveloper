@@ -7,7 +7,7 @@ public class MyListener implements PropertyChangeListener {
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        System.out.printf("Old string << %s >>, new string << %s >>", ((String) evt.getOldValue()), ((String) evt.getNewValue()));
+        System.out.printf("New subject event << %s >>. Old string << %s >>, new string << %s >>", (String) evt.getPropertyName(), (String) evt.getOldValue(), (String) evt.getNewValue());
     }
 
 }
