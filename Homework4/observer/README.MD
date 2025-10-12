@@ -36,7 +36,7 @@
 1. Инициализируется экземпляр класса MyStringBuilderс помощью строки "Hello"  
 2. Инициализируется экземпляр класса MyListener  
 3. Класс MyListener регистрируется для прослушивания событий в классе MyStringBuilder  
-4. Выполняетс добавление строки " world!"  
+4. Выполняется добавление строки " world!"  
 
 В результате в консоль выводится следующее сообщение:  
 New subject event << append >>. Old string << Hello >>, new string << Hello world! >>  
