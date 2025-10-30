@@ -3,6 +3,7 @@ package com.bank;
 import java.util.Map;
 
 import com.bank.transactions.ExchangeTransaction;
+import com.bank.transactions.Transaction;
 import com.bank.transactions.TransferTransaction;
 
 public class Cashier implements Runnable {

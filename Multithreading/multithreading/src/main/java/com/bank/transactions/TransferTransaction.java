@@ -1,7 +1,5 @@
 package com.bank.transactions;
 
-import com.bank.Transaction;
-
 public class TransferTransaction implements Transaction{
     private final int senderId;
     private final int receiverId;

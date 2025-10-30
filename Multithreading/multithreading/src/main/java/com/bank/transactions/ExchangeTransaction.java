@@ -1,7 +1,6 @@
 package com.bank.transactions;
 
 import com.bank.Currency;
-import com.bank.Transaction;
 
 public class ExchangeTransaction implements Transaction{
     private final int accountId;
