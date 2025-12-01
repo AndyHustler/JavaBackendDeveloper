@@ -24,14 +24,14 @@ public class UserController {
         this.service = service;
     }
 
-    @GetMapping("/user")
+    @GetMapping("/users")
     public List<User> listUsers() {
         return service.listUsers();
     }
 
     @GetMapping("/user/{id}")
-    public User findUser(@PathVariable(name = "id") Long index) {
-        return service.findUser(index).orElseThrow();
+    public User findUser(@PathVariable(name = "id") Long id) {
+        return service.findUser(id).orElseThrow();
     }
 
     @PostMapping(value = "/user")

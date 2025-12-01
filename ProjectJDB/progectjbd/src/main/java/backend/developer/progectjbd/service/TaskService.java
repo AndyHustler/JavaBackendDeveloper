@@ -1,6 +1,7 @@
 package backend.developer.progectjbd.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import backend.developer.progectjbd.model.Task;
 
@@ -12,7 +13,9 @@ public interface TaskService {
 
     List<Task> listAllByGroupId();
 
-    void save(Task task);
+    Optional<Task> findById(Long id);
+
+    Task save(Task task);
 
     void delete(Task task);
 }
