@@ -1,4 +1,4 @@
-package backend.developer.progectjbd.model;
+package backend.developer.progectjbd.domain.model;
 
 public enum ETaskStatus {
     ToDo,

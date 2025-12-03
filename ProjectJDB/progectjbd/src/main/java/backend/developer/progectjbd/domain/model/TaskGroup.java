@@ -1,4 +1,4 @@
-package backend.developer.progectjbd.model;
+package backend.developer.progectjbd.domain.model;
 
 import java.util.ArrayList;
 import java.util.List;

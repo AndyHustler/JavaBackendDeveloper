@@ -1,7 +1,9 @@
-package backend.developer.progectjbd.model;
+package backend.developer.progectjbd.domain.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -24,18 +26,18 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private String name;
+    @Column(name = "username", unique = true, nullable = false)
+    private String userName;
 
-    @Column
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column
+    @Column(name = "email", unique = true, nullable = false)
     @Email
     private String email;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Role> roles = new ArrayList<>();
+    private Set<ERole> roles = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Task> tasks = new ArrayList<>();

@@ -4,9 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import backend.developer.progectjbd.model.User;
+import backend.developer.progectjbd.domain.model.User;
 import backend.developer.progectjbd.repository.UserRepository;
 
 @Service
@@ -37,6 +38,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(User user) {
         repository.delete(user);
+    }
+
+    @Override
+    public User findByUserName(String username) {
+        return repository.findByUserName(username).orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
     }
 
 }

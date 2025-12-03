@@ -3,7 +3,7 @@ package backend.developer.progectjbd.service;
 import java.util.List;
 import java.util.Optional;
 
-import backend.developer.progectjbd.model.User;
+import backend.developer.progectjbd.domain.model.User;
 
 public interface UserService {
 
@@ -14,4 +14,6 @@ public interface UserService {
     User createUser(User user);
 
     void deleteUser(User user);
+
+    User findByUserName(String username);
 }

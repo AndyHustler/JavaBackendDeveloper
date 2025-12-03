@@ -3,7 +3,7 @@ package backend.developer.progectjbd.service;
 import java.util.List;
 import java.util.Optional;
 
-import backend.developer.progectjbd.model.Task;
+import backend.developer.progectjbd.domain.model.Task;
 
 public interface TaskService {
 

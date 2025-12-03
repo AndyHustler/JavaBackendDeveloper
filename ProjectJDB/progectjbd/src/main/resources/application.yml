@@ -1,21 +1,30 @@
 spring:
   application:
     name: progectjbd
-
   main:
     banner-mode: off
-
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:h2:mem:security-security
+    driverClassName: org.h2.Driver
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      naming:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 
 springdoc:
-
   api-docs:
     path: /api-docs
-
   show-actuator: true
-
   swagger-ui:
     show-extensions: true
     operations-sorter: method
@@ -23,3 +32,7 @@ springdoc:
 
 server:
   port: 8080
+
+token:
+  signing:
+    key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855

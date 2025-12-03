@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import backend.developer.progectjbd.model.User;
+import backend.developer.progectjbd.domain.model.User;
 import backend.developer.progectjbd.service.UserService;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 

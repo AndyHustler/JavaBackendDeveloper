@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import backend.developer.progectjbd.model.Task;
+import backend.developer.progectjbd.domain.model.Task;
 import backend.developer.progectjbd.service.TaskService;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
